@@ -22,14 +22,14 @@ int boardboard[5][5]= {{11,12,13,14,15},
 		       {41,42,43,44,45},
 		       {51,52,53,54,55}};
 
-
+/*
 union semun {
    int val;
    struct semid_ds *buf;
    unsigned short *array;
    struct seminfo *_buf;
 };
-
+*/
 int server_handshake(int *from_client){
 
   int to_client;
@@ -108,11 +108,7 @@ int dontBreak(int pos){
   return okay;
 }
 int isHit(int pos){
-<<<<<<< HEAD
-  int hit;
-=======
   int hit = 0;
->>>>>>> f77fcc45a5b5d702d0a2e4f4875a235af0fcc1ac
 
   if (pos == ships[0] ||
       pos == ships[1] ||
@@ -350,11 +346,7 @@ int main(){
 	break;
       }
       else if (!strcmp(result,"Ship Missed!\n")){
-<<<<<<< HEAD
-	if (!(myboard[incoord/10 - 1][incoord%10 - 1] == 'H'))
-=======
 	if (!(oppboard[incoord/10 - 1][incoord%10 - 1] == 'H'))
->>>>>>> f77fcc45a5b5d702d0a2e4f4875a235af0fcc1ac
 	  oppboard[incoord/10 - 1][incoord%10 - 1] = 'M';
       }
       else if (!strcmp(result,"Ship Hit!\n")){
